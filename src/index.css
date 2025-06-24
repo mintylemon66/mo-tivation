@@ -99,12 +99,13 @@
   }
 }
 
-/* Custom gradient animations for silky effect */
+/* Enhanced gradient animations with more complexity */
 .animate-gradient-shift {
   background-size: 400% 400%;
+  animation: gradient-shift 12s ease-in-out infinite;
 }
 
-/* Enhanced glassmorphism effects */
+/* Advanced glassmorphism effects */
 .backdrop-blur-glass {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -119,4 +120,74 @@ html {
 ::selection {
   background: rgb(147 51 234 / 0.3);
   color: rgb(147 51 234);
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Enhanced shadow effects */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Particle floating animation variants */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-20px) translateX(-15px) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+/* Enhanced blur effects for floating elements */
+.blur-sm {
+  filter: blur(4px);
+}
+
+/* Interactive hover glow effect */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Pulsing gradient text effect */
+.pulse-gradient {
+  background-size: 200% 200%;
+  animation: pulse-gradient 3s ease-in-out infinite;
+}
+
+@keyframes pulse-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Breathing animation for cards */
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
 }
